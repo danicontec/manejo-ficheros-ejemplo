@@ -17,7 +17,7 @@ public class EntryBytes {
           while(!state){
               bytes = fileBytes.read();
               if (bytes!=-1){
-                  System.out.println("Fichero leido con exito.");
+
                   data.add(segments,bytes);
               }
               else{
@@ -36,7 +36,7 @@ public class EntryBytes {
               System.out.println(console);
               boolean choose = false;
 
-          while((!console.equalsIgnoreCase("s") || !console.equalsIgnoreCase("n")) && !choose){
+          while(!(console.equalsIgnoreCase("s") || console.equalsIgnoreCase("n")) && !choose){
               System.out.println("Solo S o N");
               answer = sc.next();
               console = String.valueOf(answer.charAt(0)).toUpperCase();
